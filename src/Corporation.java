@@ -1,4 +1,4 @@
-public class Corpotarion implements Client{
+public class Corporation implements Client{
 
     private String name;
     private String cif;
