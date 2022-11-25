@@ -11,7 +11,7 @@ public class Autonomous implements Client{
 
     @Override
     public String getName() {
-        return name;
+        return name + " " + surname;
     }
 
     @Override
@@ -78,9 +78,7 @@ public class Autonomous implements Client{
     public void setTelephone(Integer telephone) {
         this.telephone = telephone;
     }
-    public String getSurname(){
-        return surname;
-    }
+
     public void setSurname(String surname) {
         this.surname = surname;
     }

@@ -4,7 +4,7 @@ public class Product implements Sale{
     private String name;
     private String brand;
     private String model;
-    private Float price;
+    private Integer price;
     private String iva;
 
     //metodos
