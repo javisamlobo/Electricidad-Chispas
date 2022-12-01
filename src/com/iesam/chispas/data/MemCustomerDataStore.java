@@ -1,7 +1,9 @@
-package data;
+package com.iesam.chispas.data.*;
 
 import java.util.List;
 import java.util.TreeMap;
+import com.iesam.chispas.*;
+import com.iesam.chispas.domain.models.Client;
 
 public class MemCustomerDataStore implements CustomerDataStore {
 

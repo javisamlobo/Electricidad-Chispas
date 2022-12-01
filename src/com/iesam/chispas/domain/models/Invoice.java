@@ -1,3 +1,5 @@
+package com.iesam.chispas.domain.models;
+
 public class Invoice {
     private String code;
     private String date;

@@ -1,3 +1,5 @@
+package com.iesam.chispas.domain.models;
+
 public interface Sale {
     public String getCode();
     public void setCode(String code);

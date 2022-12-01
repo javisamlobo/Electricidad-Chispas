@@ -1,8 +1,8 @@
-package domain;
+package com.iesam.chispas.*;
 
 
-import data.CustomerDataStore;
-import data.MemCustomerDataStore;
+import com.iesam.chispas.data.*;
+import com.iesam.chispas.domain.models.Client;
 
 public class AddCustomerUseCase {
 

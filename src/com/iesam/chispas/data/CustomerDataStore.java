@@ -1,4 +1,6 @@
-package data;
+package com.iesam.chispas.data;
+
+import com.iesam.chispas.domain.models.Client;
 
 import java.util.List;
 

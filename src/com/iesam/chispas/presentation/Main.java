@@ -1,3 +1,7 @@
+package com.iesam.chispas.presentation;
+
+import com.iesam.chispas.domain.models.*;
+
 public class Main {
     public static void main(String[] args) {
         InvoicePrinter invoicePrinter = new InvoicePrinter();

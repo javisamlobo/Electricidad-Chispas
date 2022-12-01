@@ -1,4 +1,6 @@
-public class Corporation implements Client{
+package com.iesam.chispas.domain.models;
+
+public class Corporation implements Client {
 
     private String name;
     private String cif;

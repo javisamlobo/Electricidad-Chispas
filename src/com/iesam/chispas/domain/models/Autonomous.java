@@ -1,4 +1,6 @@
-public class Autonomous implements Client{
+package com.iesam.chispas.domain.models;
+
+public class Autonomous implements Client {
 
     private String name;
     private String surname;
