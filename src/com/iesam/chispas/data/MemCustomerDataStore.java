@@ -11,7 +11,7 @@ public class MemCustomerDataStore implements CustomerDataStore {
 
     @Override
     public void saveCustomer(Client client) {
-       dataStore.put(client.getId(), cliente);
+       dataStore.put(client.getId(), client);
     }
 
     @Override
