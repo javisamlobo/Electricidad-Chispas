@@ -1,4 +1,4 @@
-package com.iesam.chispas.domain.usecase.*;
+package com.iesam.chispas.domain.usecase;
 
 import com.iesam.chispas.data.CustomerDataStore;
 import com.iesam.chispas.data.MemCustomerDataStore;
@@ -8,8 +8,12 @@ import java.util.List;
 
 public class GetCustomerUseCase {
 
+    private CustomerDataStore customerDataStore;
+
+    public GetCustomerUseCase(CustomerDataStore customerDataStore){
+        this.customerDataStore = customerDataStore;
+    }
     public List<Client> execute(){
-       CustomerDataStore customerDataStore = new MemCustomerDataStore();
-       return customerDataStore.getAllCustomers();
+      return customerDataStore.getAllCustomers();
     }
 }

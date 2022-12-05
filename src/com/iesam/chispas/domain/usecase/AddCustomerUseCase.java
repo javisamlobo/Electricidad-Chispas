@@ -1,4 +1,4 @@
-package com.iesam.chispas.*;
+package com.iesam.chispas.domain.usecase;
 
 
 import com.iesam.chispas.data.*;

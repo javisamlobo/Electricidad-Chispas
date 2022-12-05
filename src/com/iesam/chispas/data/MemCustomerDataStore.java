@@ -10,8 +10,8 @@ public class MemCustomerDataStore implements CustomerDataStore {
     private TreeMap<String, Client> dataStore = new TreeMap<String, Client>();
 
     @Override
-    public void saveCustomer(Client cliente) {
-       dataStore.put(cliente.codCliente, cliente);
+    public void saveCustomer(Client client) {
+       dataStore.put(client.getId(), cliente);
     }
 
     @Override
