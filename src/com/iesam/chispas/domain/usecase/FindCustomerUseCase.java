@@ -3,16 +3,12 @@ package com.iesam.chispas.domain.usecase;
 import com.iesam.chispas.data.CustomerDataStore;
 import com.iesam.chispas.domain.models.Client;
 
-import java.util.List;
-
-public class GetCustomerUseCase {
-
+public class FindCustomerUseCase {
     private CustomerDataStore customerDataStore;
-
-    public GetCustomerUseCase(CustomerDataStore customerDataStore){
+    public FindCustomerUseCase(CustomerDataStore customerDataStore){
         this.customerDataStore = customerDataStore;
     }
-    public List<Client> execute(){
-      return customerDataStore.getAllCustomers();
-    }
+   // public Client execute(){
+       // return customerDataStore.findById(Client);
+    //}
 }

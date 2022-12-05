@@ -10,5 +10,7 @@ public interface CustomerDataStore {
     void deleteCustomer(Client cliente);
     void updateCustomer(Client cliente);
     List<Client> getAllCustomers();
-    Client findById(Integer codCliente);
+    Client findById(Integer code);
+
+
 }

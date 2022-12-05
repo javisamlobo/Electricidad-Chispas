@@ -2,7 +2,7 @@ package com.iesam.chispas.data;
 
 import java.util.List;
 import java.util.TreeMap;
-import com.iesam.chispas.*;
+
 import com.iesam.chispas.domain.models.Client;
 
 public class MemCustomerDataStore implements CustomerDataStore {
@@ -11,7 +11,7 @@ public class MemCustomerDataStore implements CustomerDataStore {
 
     @Override
     public void saveCustomer(Client cliente) {
-       dataStore.put(cliente.getId(), cliente);
+        dataStore.put(cliente.getId(), cliente);
     }
 
     @Override
@@ -31,7 +31,7 @@ public class MemCustomerDataStore implements CustomerDataStore {
     }
 
     @Override
-    public Client findById(Integer codCliente) {
-        return dataStore.get(codCliente);
+    public Client findById(Integer code) {
+        return dataStore.get(code);
     }
 }

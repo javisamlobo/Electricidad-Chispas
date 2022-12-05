@@ -2,6 +2,7 @@ package com.iesam.chispas.domain.models;
 
 public class Autonomous implements Client {
 
+    private  Integer code;
     private String name;
     private String surname;
     private String dni;
@@ -10,6 +11,11 @@ public class Autonomous implements Client {
     private String province;
     private String email;
     private Integer telephone;
+
+    @Override
+    public Integer getCode() {
+        return code;
+    }
 
     @Override
     public String getName() {
@@ -44,6 +50,11 @@ public class Autonomous implements Client {
     @Override
     public Integer getTelephone() {
         return telephone;
+    }
+
+    @Override
+    public void setCode(Integer code) {
+        this.code = code;
     }
 
     @Override

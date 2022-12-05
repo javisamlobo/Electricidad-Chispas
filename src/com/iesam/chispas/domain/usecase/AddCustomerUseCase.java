@@ -6,8 +6,11 @@ import com.iesam.chispas.domain.models.Client;
 
 public class AddCustomerUseCase {
 
+    private CustomerDataStore customerDataStore;
+    public AddCustomerUseCase(CustomerDataStore customerDataStore){
+        this.customerDataStore = customerDataStore;
+    }
     public void execute(Client customer) {
-        CustomerDataStore customerDataStore = new MemCustomerDataStore();
         customerDataStore.saveCustomer(customer);
     }
 

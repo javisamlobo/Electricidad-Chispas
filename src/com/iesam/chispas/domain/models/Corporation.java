@@ -1,7 +1,7 @@
 package com.iesam.chispas.domain.models;
 
 public class Corporation implements Client {
-
+    private Integer code;
     private String name;
     private String cif;
     private Integer postalCode;
@@ -9,6 +9,11 @@ public class Corporation implements Client {
     private String province;
     private String email;
     private Integer telephone;
+
+    @Override
+    public Integer getCode() {
+        return code;
+    }
 
     @Override
     public String getName() {
@@ -43,6 +48,11 @@ public class Corporation implements Client {
     @Override
     public Integer getTelephone() {
         return telephone;
+    }
+
+    @Override
+    public void setCode(Integer code) {
+        this.code = code;
     }
 
     @Override

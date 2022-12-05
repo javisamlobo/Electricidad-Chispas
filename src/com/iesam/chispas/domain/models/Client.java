@@ -1,7 +1,7 @@
 package com.iesam.chispas.domain.models;
 
 public interface Client {
-
+    public Integer getCode();
     public String getName();
     public String getId();
     public Integer getPostalCode();
@@ -9,6 +9,7 @@ public interface Client {
     public String getProvince();
     public String getEmail();
     public Integer getTelephone();
+    public void setCode( Integer code);
     public void setName( String name);
     public void setId( String id);
     public void setPostalCode (Integer postalCode);
