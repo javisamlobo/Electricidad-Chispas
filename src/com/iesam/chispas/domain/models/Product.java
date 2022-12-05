@@ -2,9 +2,10 @@ package com.iesam.chispas.domain.models;
 
 public class Product implements Sale {
 
-    private String productCode;
+    private String code;
     private String name;
     private String brand;
+
     private String model;
     private Integer price;
     private String iva;
@@ -29,12 +30,12 @@ public class Product implements Sale {
 
     @Override
     public String getCode() {
-        return productCode;
+        return code;
     }
 
     @Override
     public void setCode(String code) {
-        this.productCode = code;
+        this.code = code;
     }
 
     @Override

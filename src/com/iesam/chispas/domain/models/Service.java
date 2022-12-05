@@ -2,19 +2,20 @@ package com.iesam.chispas.domain.models;
 
 public class Service implements Sale {
 
-    private String productService;
+    private String code;
     private String name;
     private Integer price;
+
     private String iva;
 
     @Override
     public String getCode() {
-        return productService;
+        return code;
     }
 
     @Override
     public void setCode(String code) {
-        this.productService = code;
+        this.code = code;
     }
 
     @Override
