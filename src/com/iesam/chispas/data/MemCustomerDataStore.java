@@ -1,4 +1,4 @@
-package com.iesam.chispas.data.*;
+package com.iesam.chispas.data;
 
 import java.util.List;
 import java.util.TreeMap;
@@ -7,11 +7,11 @@ import com.iesam.chispas.domain.models.Client;
 
 public class MemCustomerDataStore implements CustomerDataStore {
 
-    private TreeMap<String, Client> dataStore = new TreeMap<String, Client>();
+    private TreeMap<String, Client> dataStore = new TreeMap<>();
 
     @Override
-    public void saveCustomer(Client client) {
-       dataStore.put(client.getId(), client);
+    public void saveCustomer(Client cliente) {
+       dataStore.put(cliente.getId(), cliente);
     }
 
     @Override
@@ -21,7 +21,7 @@ public class MemCustomerDataStore implements CustomerDataStore {
 
     @Override
     public void updateCustomer(Client cliente) {
-        dataStore.replace(cliente.CodCliente, cliente);
+        dataStore.replace(cliente.getId(), cliente);
     }
 
     @Override
