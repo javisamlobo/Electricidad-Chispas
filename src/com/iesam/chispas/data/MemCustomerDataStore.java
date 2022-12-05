@@ -7,21 +7,21 @@ import com.iesam.chispas.domain.models.Client;
 
 public class MemCustomerDataStore implements CustomerDataStore {
 
-    private TreeMap<String, Client> dataStore = new TreeMap<>();
+    private TreeMap<Integer, Client> dataStore = new TreeMap<>();
 
     @Override
-    public void saveCustomer(Client cliente) {
-        dataStore.put(cliente.getId(), cliente);
+    public void saveCustomer(Client client) {
+        dataStore.put(client.getCode(), client);
     }
 
     @Override
-    public void deleteCustomer(Client cliente) {
-        dataStore.remove(cliente);
+    public void deleteCustomer(Client client) {
+        dataStore.remove(client.getCode());
     }
 
     @Override
-    public void updateCustomer(Client cliente) {
-        dataStore.replace(cliente.getId(), cliente);
+    public void updateCustomer(Client client) {
+        dataStore.replace(client.getCode(), client);
     }
 
     @Override

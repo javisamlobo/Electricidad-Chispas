@@ -1,12 +1,19 @@
 package com.iesam.chispas.presentation;
 
+import com.iesam.chispas.data.CustomerDataStore;
+import com.iesam.chispas.data.MemCustomerDataStore;
 import com.iesam.chispas.domain.models.*;
+import com.iesam.chispas.domain.usecase.*;
+
+
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         InvoicePrinter invoicePrinter = new InvoicePrinter();
 
         Autonomous autonomo = new Autonomous();
+        autonomo.setCode(1);
         autonomo.setId("70562154J");
         autonomo.setName("Pepe");
         autonomo.setSurname("Perez");
@@ -17,6 +24,7 @@ public class Main {
         autonomo.setEmail("pepeperez@gmail.com");
 
         Corporation sociedad = new Corporation();
+        sociedad.setCode(1);
         sociedad.setId("B-89654215");
         sociedad.setName("Innovation.SL");
         sociedad.setEmail("atencion@inno.com");
@@ -47,6 +55,44 @@ public class Main {
         factura.setTaxBase(100);
         factura.setTotal(121);
 
-        invoicePrinter.print(factura);
+        CustomerDataStore customerDataStore = new MemCustomerDataStore();
+        AddCustomerUseCase addCustomerUseCase = new AddCustomerUseCase(customerDataStore);
+        addCustomerUseCase.execute(autonomo);
+        addCustomerUseCase.execute(sociedad);
+
+        GetCustomerUseCase getCustomerUseCase = new GetCustomerUseCase(customerDataStore);
+        List<Client> customer = getCustomerUseCase.execute();
+        for (int i = 0; i <  customer.size(); i++){
+            printClient(customer.get(i));
+        }
+        System.out.println("Eliminado......");
+
+        DeleteCustomerUseCase deleteCustomerUseCase = new DeleteCustomerUseCase(customerDataStore);
+        deleteCustomerUseCase.execute(autonomo);
+
+        List<Client> customer2 = getCustomerUseCase.execute();
+        for (int i = 0; i < customer2.size(); i++){
+            printClient(customer2.get(i));
+        }
+
+        System.out.println("Update");
+        sociedad.setEmail("asdasdas");
+        UpdateCustomerUseCase updateCustomerUseCase = new UpdateCustomerUseCase(customerDataStore);
+        updateCustomerUseCase.execute(sociedad);
+
+        List<Client> customer3 = getCustomerUseCase.execute();
+        for (int i = 0; i < customer3.size(); i++){
+            printClient(customer3.get(i));
+        }
+        //invoicePrinter.print(factura);
     }
+
+    public static void printClient( Client client) {
+            System.out.println("Cod: " + client.getCode() + " Nombre: " + client.getName() + " Email: " + client.getEmail());
+        }
+
+
+
+
+
 }

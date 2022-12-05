@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface CustomerDataStore {
 
-    void saveCustomer(Client cliente);
-    void deleteCustomer(Client cliente);
-    void updateCustomer(Client cliente);
+    void saveCustomer(Client client);
+    void deleteCustomer(Client client);
+    void updateCustomer(Client client);
     List<Client> getAllCustomers();
     Client findById(Integer code);
 
