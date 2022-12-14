@@ -1,38 +1,21 @@
-public class Product implements Sale{
+package com.iesam.chispas.domain.models;
 
-    private String productCode;
+public class Service implements Sale {
+
+    private String code;
     private String name;
-    private String brand;
-    private String model;
     private Integer price;
+
     private String iva;
-
-    //metodos
-
-    public String getBrand() {
-        return brand;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
 
     @Override
     public String getCode() {
-        return productCode;
+        return code;
     }
 
     @Override
     public void setCode(String code) {
-        this.productCode = code;
+        this.code = code;
     }
 
     @Override
@@ -42,7 +25,7 @@ public class Product implements Sale{
 
     @Override
     public void setName(String name) {
-        this.name = name;
+        this.name= name;
     }
 
     @Override
@@ -62,6 +45,6 @@ public class Product implements Sale{
 
     @Override
     public void setIva(String iva) {
-            this.iva = iva;
+        this.iva= iva;
     }
 }

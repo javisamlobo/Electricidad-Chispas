@@ -1,3 +1,7 @@
+package com.iesam.chispas.presentation;
+
+import com.iesam.chispas.domain.models.Invoice;
+
 public class InvoicePrinter {
     public void print(Invoice invoice){
     System.out.println("Factura: " + invoice.getCode() + " | " + invoice.getDate() );
