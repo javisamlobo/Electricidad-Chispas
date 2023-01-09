@@ -8,7 +8,8 @@ public class FindCustomerUseCase {
     public FindCustomerUseCase(CustomerDataStore customerDataStore){
         this.customerDataStore = customerDataStore;
     }
-   // public Client execute(){
-       // return customerDataStore.findById(Client);
+   public Client execute(){
+        return customerDataStore.findById(Client);
+   }
     //}
 }

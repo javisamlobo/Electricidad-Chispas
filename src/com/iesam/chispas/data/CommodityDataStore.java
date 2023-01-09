@@ -9,5 +9,5 @@ public interface CommodityDataStore {
     void deleteSale(Sale sale);
     void updateSale(Sale sale);
     List<Sale> getAllSales();
-    Sale finById(String cod);
+    Sale finById(Integer cod);
 }

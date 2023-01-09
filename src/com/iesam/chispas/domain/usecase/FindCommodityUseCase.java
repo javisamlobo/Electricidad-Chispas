@@ -8,7 +8,7 @@ public class FindCommodityUseCase {
     public FindCommodityUseCase (CommodityDataStore commodityDataStore){
         this.commodityDataStore = commodityDataStore;
     }
-    //public Sale execute(){
-    //    return commodityDataStore.finById();
-    //}
+    public Sale execute(Integer code){
+     return commodityDataStore.finById(code);
+    }
 }

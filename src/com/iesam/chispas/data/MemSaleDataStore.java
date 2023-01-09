@@ -28,7 +28,7 @@ public class MemSaleDataStore implements CommodityDataStore {
     }
 
     @Override
-    public Sale finById(String code) {
+    public Sale finById(Integer code) {
         return dataStore.get(code);
     }
 }
